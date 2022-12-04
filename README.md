@@ -26,7 +26,7 @@ SO THAT I can reliably retrieve them for later use
 
   <a name = 'usefaq'></a>
   ## Usage
-  Can be installed as a Progressive web Application.
+  Can be installed as a Progressive Web Application.
 
   <a name = 'install'></a>
   ## Installation   
