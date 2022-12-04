@@ -8,7 +8,10 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
+      database: './src/js/database.js',
+      editor: './src/js/editor.js',
+      header: './src/js/header'
     },
     output: {
       filename: '[name].bundle.js',
@@ -19,7 +22,7 @@ module.exports = () => {
       //Webpack plugin that generates our html file and injects our bundles.
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'TESTING'
+        title: 'JATE'
       }),
 
       //Injects our custom service worker
@@ -31,14 +34,14 @@ module.exports = () => {
       //Creates a manifest.json file
       new WebpackPwaManifest({
         fingerprints: false,
-        njcet: true,
-        name: 'TESTING',
-        short_name: "Test",
+        injcet: true,
+        name: 'Just Another Text Editor',
+        short_name: "JATE",
         description:'Never forget your text notes',
         background_color: '#225ca3',
         theme_color: '#225ca3',
-        start_url: './',
-        publicPath: './',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),

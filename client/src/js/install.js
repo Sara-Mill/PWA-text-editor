@@ -4,12 +4,15 @@ const butInstall = document.getElementById('buttonInstall');
 
 // This adds an event handler to the `beforeinstallprompt` event
 window.addEventListener('beforeinstallprompt', (event) => {
-        // Store the triggered events
+    console.log('hit')
+    console.log("event" + event)
+    event.preventDefault();    
+    // Store the triggered events
         window.deferredPrompt = event;
 
         //Remove the hidden class from the button.
         butInstall.classList.toggle('hidden', false);
-        });
+});
     
 // This implements a click event handler on the `butInstall` element
 butInstall.addEventListener('click', async () => {
@@ -31,5 +34,6 @@ butInstall.addEventListener('click', async () => {
 // This adds a handler for the `appinstalled` event
 window.addEventListener('appinstalled', (event) => {
     //Clear prompt
+    console.log('install hit')
     window.deferredPrompt = null;
 });
