@@ -40,8 +40,6 @@ SO THAT I can reliably retrieve them for later use
 
   <a name = 'dependencies'></a>
   ## Dependencies
-     ![image of dependencies screenshot:](./images/dependencies.png)
-     
     * "babel": "^6.23.0",
     * "express": "^4.18.2",
     * "idb": "^7.1.1",
